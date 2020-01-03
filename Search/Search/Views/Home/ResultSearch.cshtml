@@ -2,18 +2,32 @@
 
 
 @{
-    ViewBag.Title = "View";
-}
+                /**/
 
-<h2>Resultado Busqueda</h2>
+                ViewBag.Title = "View";
+}
+<link href="~/Content/StyleRS.css" rel="stylesheet" type="text/css"/>
+<h2>Resultado Busqueda de @Model.resultCount</h2>
 
 @foreach (var result in Model.results)
 {
-    <div class="card">
-        <img src=@result.artworkUrl60 class="card">
-        <h1> @result.collectionName</h1>
-        <h1> @result.artistName</h1>
-        <h1>@result.collectionPrice</h1>
-        <br />
+  
+
+
+    <div class="id-card-wrapper">
+        <div class="id-card">
+            <div class="profile-row">
+                <div class="dp">
+                    <img src=@result.artworkUrl60 class="card">
+                </div>
+                <div class="desc">
+                    <h1>Album: </h1><h3> @result.collectionName   </h3>
+                    <h1>Nombre Artista :</h1><h3>@result.artistName</h3>
+                    <h1>Precio :</h1><h3>@result.collectionPrice</h3>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 }
