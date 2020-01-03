@@ -1,9 +1,19 @@
-﻿
+﻿@model Search.Models.Resultado
 
 
 @{
     ViewBag.Title = "View";
 }
 
-<h2>View</h2>
+<h2>Resultado Busqueda</h2>
 
+@foreach (var result in Model.results)
+{
+    <div class="card">
+        <img src=@result.artworkUrl60 class="card">
+        <h1> @result.collectionName</h1>
+        <h1> @result.artistName</h1>
+        <h1>@result.collectionPrice</h1>
+        <br />
+    </div>
+}
