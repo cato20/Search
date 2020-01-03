@@ -1,14 +1,14 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<link href="~/Content/StyleIndex.css" rel="stylesheet" type="text/css" />
 <div class="jumbotron">
     <h1>Search Content Excersice</h1>
     <p class="lead">Esta es una pagina web, que permite realizar la busqueda de informacion de los albums de los artistas</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    
 </div>
-
+<h3> Ingrese el artista a buscar:</h3>
 <form action="/Home/ResultSearch" method="post">
     <input name="txtSearch" type="text" />
-    <button>Buscar</button>
+    <button class="btnSearch">Buscar</button>
 </form>
